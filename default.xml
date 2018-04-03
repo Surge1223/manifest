@@ -44,6 +44,7 @@
            sync-c="true"
            sync-j="8" />
            
+           <project path="manifest" name="manifest" remote="surge" revision="o+"  />
            
            <!-- Vendor Source -->
            <project path="vendor/google" name="proprietary_vendor_google" groups="pdk" remote="surge" revision="android-8.1" />
@@ -52,9 +53,9 @@
            <project path="vendor/gapps" name="vendor_gapps" clone-depth="1" remote="gitlab" revision="o-mr1" />
            
            <!-- Device Source -->
-           <project path="device/google/taimen" name="device_google_taimen" groups="pdk" remote="surge" revision="o+" />
-           <project path="device/google/wahoo" name="device_google_wahoo" groups="pdk" remote="surge" revision="o+" />
-           <project path="device/lge/bullhead" name="device_lge_bullhead" groups="pdk" remote="surge" revision="o+" />
+           <project path="device/google/taimen" name="device_google_taimen" groups="pdk" remote="krexus-friends" revision="o+" />
+           <project path="device/google/wahoo" name="device_google_wahoo" groups="pdk" remote="krexus-friends" revision="o+" />
+           <project path="device/lge/bullhead" name="device_lge_bullhead" groups="pdk" remote="krexus-friends" revision="o+" />
            
            <!-- Kernel Source -->
            <project  path="kernel/google/taimen" name="android_kernel_google_taimen" groups="device,angler,broadcom_pdk" remote="surge" revision="android-msm-wahoo-4.4-oreo-mr1" />
@@ -68,7 +69,7 @@
            <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="surge" revision="o+" />
 
 
-<project path="build/make" name="android_build" remote="surge" revision="harsh" groups="pdk" >
+<project path="build/make" name="build" remote="surge" revision="harsh" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
