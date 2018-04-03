@@ -46,7 +46,7 @@
            
    <remote name="caf"
            fetch="https://source.codeaurora.org/quic/la/"
-           sync-c=""true"
+           sync-c="true"
            sync-j="8" />
 
            <project path="manifest" name="manifest" remote="surge" revision="o+"  />
@@ -56,16 +56,19 @@
            <project path="vendor/lge" name="proprietary_vendor_lge" remote="pure-legacy" revision="o" />
            <project path="vendor/krexus" name="vendor_krexus" groups="pdk" remote="surge" revision="o+" />
            <project path="vendor/gapps" name="vendor_gapps" clone-depth="1" remote="gitlab" revision="o-mr1" />
+           <project path="vendor/huawei/berkeley" name="proprietary_vendor_huawei_berkeley" groups="pdk" remote="surge" revision="o+" />
            <project path="vendor/codeaurora/telephony" name="platform/vendor/codeaurora/telephony" revision="LA.UM.6.4.c1-11200-8x98.0" />
 
            <!-- Device Source -->
            <project path="device/google/taimen" name="device_google_taimen" groups="pdk" remote="krexus-friends" revision="o+" />
            <project path="device/google/wahoo" name="device_google_wahoo" groups="pdk" remote="krexus-friends" revision="o+" />
            <project path="device/lge/bullhead" name="device_lge_bullhead" groups="pdk" remote="krexus-friends" revision="o+" />
+           <project path="device/huawei/berkeley" name="android_device_huawei_berkeley" groups="pdk" remote="surge" revision="o+" />
            
            <!-- Kernel Source -->
-           <project  path="kernel/google/taimen" name="android_kernel_google_taimen" groups="device,angler,broadcom_pdk" remote="surge" revision="android-msm-wahoo-4.4-oreo-mr1" />
-           <project  path="kernel/lge/bullhead" name="android_kernel_lge_bullhead" groups="device,angler,broadcom_pdk" remote="surge" />
+           <project  path="kernel/google/taimen" name="android_kernel_google_taimen" groups="device,taimen,broadcom_pdk" remote="surge" revision="android-msm-wahoo-4.4-oreo-mr1" />
+           <project  path="kernel/lge/bullhead" name="android_kernel_lge_bullhead" groups="device,bullhead,broadcom_pdk" remote="surge" />
+           <project  path="kernel/huawei/berkeley" name="android_kernel_huawei_berkeley" groups="device,berkeley,broadcom_pdk" remote="surge" revision="o+" />
            
            
            <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="surge" revision="o+"  />
