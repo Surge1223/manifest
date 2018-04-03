@@ -44,6 +44,11 @@
            sync-c="true"
            sync-j="8" />
            
+   <remote name="caf"
+           fetch="https://source.codeaurora.org/quic/la/"
+           sync-c=""true"
+           sync-j="8" />
+
            <project path="manifest" name="manifest" remote="surge" revision="o+"  />
            
            <!-- Vendor Source -->
@@ -51,7 +56,8 @@
            <project path="vendor/lge" name="proprietary_vendor_lge" remote="pure-legacy" revision="o" />
            <project path="vendor/krexus" name="vendor_krexus" groups="pdk" remote="surge" revision="o+" />
            <project path="vendor/gapps" name="vendor_gapps" clone-depth="1" remote="gitlab" revision="o-mr1" />
-           
+           <project path="vendor/codeaurora/telephony" name="platform/vendor/codeaurora/telephony" revision="LA.UM.6.4.c1-11200-8x98.0" />
+
            <!-- Device Source -->
            <project path="device/google/taimen" name="device_google_taimen" groups="pdk" remote="krexus-friends" revision="o+" />
            <project path="device/google/wahoo" name="device_google_wahoo" groups="pdk" remote="krexus-friends" revision="o+" />
