@@ -67,7 +67,7 @@
    <project path="device/huawei/berkeley" name="android_device_huawei_berkeley" groups="pdk" remote="surge" revision="o+" />
            
            <!-- Kernel Source -->
-   <project  path="kernel/google/taimen" name="android_kernel_google_taimen" groups="device,taimen,broadcom_pdk" remote="surge" revision="android-msm-wahoo-4.4-oreo-mr1" />
+   <project  path="kernel/google/taimen" name="android_kernel_google_taimen" groups="device,taimen,broadcom_pdk" remote="surge" revision="android-msm-wahoo-4.4-oreo-m2" />
    <project  path="kernel/lge/bullhead" name="android_kernel_lge_bullhead" groups="device,bullhead,broadcom_pdk" remote="surge" revision="o+" />
    <project  path="kernel/huawei/berkeley" name="android_kernel_huawei_berkeley" groups="device,berkeley,broadcom_pdk" remote="surge" revision="o" />
            
