@@ -57,7 +57,7 @@
    <project path="vendor/krexus" name="vendor_krexus" groups="pdk" remote="surge" revision="o+" />
    <project path="vendor/gapps" name="vendor_gapps" clone-depth="1" remote="gitlab" revision="o-mr1" />
    <project path="vendor/huawei/berkeley" name="proprietary_vendor_huawei_berkeley" groups="pdk" remote="surge" revision="o+" />
-   <project path="vendor/codeaurora/telephony" name="platform/vendor/codeaurora/telephony" revision="LA.UM.6.4.c1-11200-8x98.0" />
+   <project path="vendor/codeaurora/telephony" name="platform/vendor/codeaurora/telephony" remote="caf" revision="LA.UM.6.4.c1-11200-8x98.0" />
 
            <!-- Device Source -->
    <project path="device/google/taimen" name="device_google_taimen" groups="pdk" remote="krexus-friends" revision="o+" />
