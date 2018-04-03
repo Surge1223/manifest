@@ -4,6 +4,7 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
+
   <default revision="refs/tags/android-8.1.0_r20"
            remote="aosp"
            sync-f="true"
@@ -18,7 +19,6 @@
    <remote name="surge"
            fetch="https://github.com/Surge1223"
            sync-c="true"
-           revision="o+"
            sync-f="true"
            sync-j="8" />
            
