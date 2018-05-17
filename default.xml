@@ -5,7 +5,7 @@
            fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
 
-  <default revision="refs/tags/android-8.1.0_r28"
+  <default revision="refs/tags/android-8.1.0_r26"
            remote="aosp"
            sync-f="true"
            sync-j="16" />
@@ -54,9 +54,8 @@
            
            <!-- Vendor Source -->
    <project path="vendor/google" name="proprietary_vendor_google" groups="pdk" remote="surge" revision="o+" />
-   <project path="vendor/lge" name="proprietary_vendor_lge" remote="pure-legacy" revision="o" />
    <project path="vendor/nexus" name="abc_vendor_nexus" groups="pdk" remote="surge" revision="o+" />
-   <project path="vendor/gapps" name="vendor_gapps" clone-depth="1" remote="gitlab" revision="o-mr1" />
+   <project path="vendor/gapps" name="vendor_gapps" clone-depth="1" remote="gitlab" revision="o+" />
    <project path="vendor/huawei/berkeley" name="proprietary_vendor_huawei_berkeley" groups="pdk" remote="surge" revision="o+" />
 
            <!-- Device Source -->
@@ -74,7 +73,7 @@
    <project path="packages/apps/Settings" name="platform_packages_apps_settings" groups="pdk-fs" remote="surge" revision="o+"  />
    <project path="system/core" name="android_system_core" remote="surge" revision="o+" />
    <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="surge" revision="o-m2" />
-   <project path="external/selinux" name="platform/external/selinux" groups="pdk" emote="surge" revision="o+" />
+   <project path="external/selinux" name="android_external_selinux" groups="pdk" remote="surge" revision="o+" />
 
 
   <project path="build/make" name="build" remote="surge" revision="o+" groups="pdk" >
