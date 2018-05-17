@@ -5,10 +5,10 @@
            fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
 
-  <default revision="refs/tags/android-8.1.0_r20"
+  <default revision="refs/tags/android-8.1.0_r28"
            remote="aosp"
            sync-f="true"
-           sync-j="8" />
+           sync-j="16" />
            
   <remote  name="krexus"
            fetch="https://github.com/krexus"
