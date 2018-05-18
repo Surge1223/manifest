@@ -5,7 +5,7 @@
            fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
 
-  <default revision="refs/tags/android-8.1.0_r26"
+  <default revision="refs/tags/android-8.1.0_r36"
            remote="aosp"
            sync-f="true"
            sync-j="16" />
@@ -61,7 +61,7 @@
            <!-- Device Source -->
    <project path="device/google/taimen" name="android_device_google_taimen" groups="pdk" remote="surge" revision="o+" />
    <project path="device/google/wahoo" name="android_device_google_wahoo" groups="pdk" remote="surge" revision="o+" />
-   <project path="device/huawei/berkeley" name="android_device_huawei_berkeley" groups="pdk" remote="surge" revision="o+" />
+   <project path="device/huawei/berkeley" name="android_device_huawei_berkeley" groups="pdk" remote="surge" revision="lessshitty-lineage-15.1" />
            
            <!-- Kernel Source -->
    <project  path="kernel/google/taimen" name="android_kernel_google_taimen" groups="device,taimen,broadcom_pdk" remote="surge" revision="o-m2" />
@@ -260,7 +260,6 @@
   <project path="external/libusb" name="platform/external/libusb" groups="pdk" />
   <project path="external/libusb-compat" name="platform/external/libusb-compat" groups="pdk" />
   <project path="external/libvncserver" name="platform/external/libvncserver" groups="pdk" />
-  <project path="external/libvorbis" name="platform/external/libvorbis" groups="pdk" />
   <project path="external/libvpx" name="platform/external/libvpx" groups="pdk" />
   <project path="external/libvterm" name="platform/external/libvterm" groups="pdk" />
   <project path="external/libxml2" name="platform/external/libxml2" groups="pdk,libxml2" />
