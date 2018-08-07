@@ -10,7 +10,7 @@
            sync-f="true"
            sync-j="16" />
            
-   <remote name="surge"
+   <remote name="me"
            fetch="https://github.com/Surge1223"
            sync-c="true"
            revision="p"
@@ -32,11 +32,11 @@
            sync-c="true"
            sync-j="8" />
 
-   <project path="manifest" name="manifest" remote="surge" revision="p"  />
+   <project path="manifest" name="manifest" remote="me" revision="p"  />
            
            <!-- Vendor Source -->
-   <project path="vendor/nexus" name="abc_vendor_nexus" groups="pdk" remote="surge" revision="p" />
-   <project path="vendor/gapps" name="vendor_gapps" clone-depth="1" remote="gitlab" revision="p" />
+   <project path="vendor/nexus" name="abc_vendor_nexus" groups="pdk" remote="me" revision="p" />
+   <project path="vendor/gapps" name="vendor_gapps" clone-depth="1" remote="me" revision="p" />
 
            <!-- Device Source -->
            
