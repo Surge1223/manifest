@@ -32,32 +32,38 @@
            sync-c="true"
            sync-j="8" />
 
-   <project path="manifest" name="manifest" remote="me" revision="p"  />
-           
-           <!-- Vendor Source -->
+ <!-- Platform Source -->
+  <project path="manifest" name="manifest" remote="me" revision="p"  />
+
+   <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="me" revision="p" >
+     <linkfile src="root.bp" dest="Android.bp" />
+     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+   </project>
+
+   <project path="build/make" name="build" remote="me" revision="p" groups="pdk" >
+     <copyfile src="core/root.mk" dest="Makefile" />
+     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+     <linkfile src="core" dest="build/core" />
+     <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+     <linkfile src="target" dest="build/target" />
+     <linkfile src="tools" dest="build/tools" />
+   </project>
+
+  <!-- Vendor Source -->
    <project path="vendor/nexus" name="abc_vendor_nexus" groups="pdk" remote="me" revision="p" />
    <project path="vendor/gapps" name="vendor_gapps" clone-depth="1" remote="me" revision="p" />
 
-           <!-- Device Source -->
+  <!-- Device Source -->
+   <project path="device/google/taimen" name="android_device_google_taimen" groups="pdk" remote="me" revision="p" />
+   <project path="device/google/wahoo" name="android_device_google_wahoo" groups="pdk" remote="me" revision="p" />
            
-           <!-- Kernel Source -->
+  <!-- Kernel Source -->
    <project  path="kernel/google/taimen" name="android_kernel_google_taimen" groups="device,taimen,broadcom_pdk" remote="me" revision="android-msm-wahoo-4.4-pie" />
 
-  <project path="build/make" name="platform/build" groups="pdk" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-    <linkfile src="core" dest="build/core" />
-    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-    <linkfile src="target" dest="build/target" />
-    <linkfile src="tools" dest="build/tools" />
-  </project>
+  <!-- Platform Source -->
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" />
-  <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
   <project path="art" name="platform/art" groups="pdk" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
@@ -69,9 +75,7 @@
   <project path="developers/samples/android" name="platform/developers/samples/android" groups="developers" />
   <project path="development" name="platform/development" groups="developers,pdk-cw-fs,pdk-fs" />
   <project path="device/common" name="device/common" groups="pdk-cw-fs,pdk" />
-  <project path="device/google/taimen" name="device/google/taimen" groups="device,taimen,pdk" />
   <project path="device/google/vrservices" name="device/google/vrservices" groups="pdk" clone-depth="1" />
-  <project path="device/google/wahoo" name="device/google/wahoo" groups="device,wahoo,pdk" />
   <project path="device/sample" name="device/sample" groups="pdk" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/abi-compliance-checker" name="platform/external/abi-compliance-checker" groups="pdk" />
