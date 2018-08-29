@@ -33,7 +33,7 @@
            sync-j="8" />
 
   <!-- Platform Source -->
-   <project path="manifest" name="manifest" remote="me" revision="p"  />
+   <project path="manifest" name="manifest" remote="me" revision="test"  />
 
    <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="me" revision="p" >
      <linkfile src="root.bp" dest="Android.bp" />
